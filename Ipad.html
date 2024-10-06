@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IPad</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div id="siteheader">
+    <div id="Logoname" onclick="transitionToPage('index.html')">
+      <img id="logoimg" src="images/connectlogo.png" width="100%" height="100%">
+    </div>
+    <div id="siteheader-content">
+      <span id="overview" onclick="transitionToPage('index.html')">Overview</span>
+      <span id="contact" onclick="transitionToPage('People.html')">People</span>
+      <span id="classes" onclick="transitionToPage('Ipad.html')" class="currentpage">Ipad</span>
+      <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+      <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+    </div>
+    <div id="dropdiv" class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">
+        <img id="dropimg" class="dropbtn" src="images/open.png" width=50 height=50>
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <span id="overview" onclick="transitionToPage('index.html')">Overview</span>
+        <span id="contact" onclick="transitionToPage('People.html')">People</span>
+        <span id="classes" class="currentpage2" onclick="transitionToPage('Ipad.html')">Ipad</span>
+        <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+        <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/ipad1.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">December 2023</div>
+    </div>
+    <span class="info">
+      <h1>boy and heron</h1><br>
+      <div class="line-2"></div>
+      I drew this with my brother while on plane ride to Cancun in Winter Break
+    </span>
+  </div>
+
+  <div class="person">
+    <span class="info">
+      <h1>boy x heron<br> computer wallpaper</h1><br>
+      <div class="line-2"></div>
+      I drew this after watching <br>boy and heron with my brother.<br>
+    </span>
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/ipad2.png" alt="Max">
+      </span>
+      <div class="bottom-right-text">2023 December</div>
+    </div>
+    <div class="person">
+      <div class="image-container2">
+        <span id="maximg">
+          <img class="clickable" id="maxpicture" src="images/ipad3.jpg" alt="Max">
+        </span>
+        <div class="bottom-right-text">April 2024</div>
+      </div>
+      <span class="info">
+        <h1>he is more chinese<br> than Kevin Zhou</h1><br>
+        <div class="line-2"></div>
+        I drew this on plane ride on Ana's iPad
+      </span>
+    </div>
+  </div>
+
+  <footer>
+    <p>Make your own website<br>
+      <a href="https://youtu.be/chOvyuyZe9M">https://youtu.be/chOvyuyZe9M</a>
+    </p>
+    <br>
+    <p>Do not email me<br>
+      <a href="mailto:maxhzhang119@gmail.com">maxhzhang119@gmail.com</a>
+    </p>
+  </footer>
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

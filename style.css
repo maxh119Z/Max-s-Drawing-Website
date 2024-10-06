@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-wrap: wrap;
+}
+
+img {
+  cursor: pointer;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: opacity .3s;
+}
+
+#siteheader {
+  background-image: url("images/Croppedbackground1.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 21px;
+  padding-right: 50px;
+}
+
+#siteheader-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#siteheader-content span {
+  font-size: 1.2rem;
+  color: #ffffff; 
+  font-weight: 600;
+  text-shadow: 2px 0px 2px rgba(0,0,0,0.9);
+  transition-duration: 0.5s;
+}
+
+span h3 {
+  font-weight: 10;
+}
+
+#siteheader-content span:hover {
+  transform: translate(0,-2px);
+  text-decoration: underline #baeffd;
+}
+
+.currentpage {
+  text-decoration: underline gold;
+}
+.currentpage2 {
+  text-decoration: underline #00fbff;
+}
+
+#Logoname {
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+  margin-right: 10px;
+  box-shadow:none;
+  margin-left: 5px;
+  min-width: 30px;
+  width: auto;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color:rgba(0,0,0,0.8);
+}
+#logoimg {
+  height: 75px;
+  width: auto;
+  box-shadow:none;
+}
+#TITLE {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#TITLE h1 {
+  font-weight: 500;
+}
+
+#titledescription {
+  font-size: 1.5rem;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.line-1 {
+  width: 78%;
+  margin: 0 auto;
+  height: 1px;
+  background: rgba(0,0,0,0.5);
+}
+
+.line-2 {
+  width: 75%;
+  height: 2px;
+  background: rgba(0,0,0,0.8);
+}
+
+.line-3 {
+  width: 75%;
+  margin: 0 auto;
+  height: 2px;
+  background: rgba(0,0,0,0.8);
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+#overview {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  width:auto;
+  height:auto;
+  transition-duration:0.5s;
+}
+.image-container2{
+  position: relative;
+  width:auto;
+  height:auto;
+  transition-duration:0.5s;
+}
+.image-container:hover{
+  transform: translateY(-10px);
+}
+
+#overview img {
+  max-width: 100%;
+  height: auto;
+}
+.bottom-right-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#overview-text {
+  max-width: 600px;
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#overviewpicture {
+  min-width:200px;
+  width: calc(17vh * 16/9);
+  height: 17vh; 
+}
+#overviewpicture hover{
+  transform: scale(1.05);
+}
+
+.indexpics {
+  width:auto;
+  height: 32vh; 
+}
+.peoplepics {
+  width:35%;
+  height:auto;
+}
+.bottom-left {
+  position: relative;
+  bottom: 8px;
+  left: 16px;
+}
+
+#maxinfo {
+  width:50%;
+  line-height: 1.5;
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+#maxpicture {
+  width: 33vw;
+  height: auto;
+}
+#rajatpicture {
+  width: 33vw;
+  height: auto; 
+}
+#cadenpicture {
+  width: 33vw;
+  height: auto; 
+}
+.info {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 43vw;
+  text-wrap: wrap;
+}
+.info2 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  max-width: 43vw;
+  text-wrap: wrap;
+}
+
+footer {
+  margin-top: 65px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.8);
+  background-size: contain;
+  color: white;
+  font-size: 70%;
+  box-shadow: 0px -3px 10px 0px rgba(0,0,0,0.45);
+}
+
+footer a {
+  color: white;
+}
+
+#contactpicture {
+  width: 45vw;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.forms {
+  width: 45vw;
+  height: 70vh;
+  margin: 0 auto; /* Center the form horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*w3schoolshttps://www.w3schools.com/howto/howto_js_dropdown.asp*/
+.dropbtn {
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  border:none;
+  display:none;
+  position: relative;
+}
+.dropbtn{
+   border:none;
+  transition-duration:0.5s;
+}
+.dropbtn:hover{
+  transform: translateY(-3px);
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  transform: translate(-80px, 0px);
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content span {
+  text-align:center;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.dropbtn2 {
+  border-radius:5px;
+
+  /* border: 2px solid #154761; */
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease ;
+  border:none;
+  background: linear-gradient(90deg, #0084ff, #1fa3ff);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropbtn2:hover {
+  transform: translateY(-3px);
+}
+.dropbtn2:hover {
+  background: linear-gradient(90deg, #1fa3ff, #0084ff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Add focus state */
+.dropbtn2:focus {
+  background: linear-gradient(90deg, #0084ff, #1fa3ff); /* Ensure the background color persists */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.5);
+}
+
+/* Add active state */
+.dropbtn2:active {
+  background: linear-gradient(90deg, #006bbf, #0084ff);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+#A{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  gap: 15px;
+}
+#B{
+  position:fixed;
+  z-index:11111;
+  bottom: 10px;
+  left: 11px;
+}

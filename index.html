@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Overview</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div id = "B"><button class="dropbtn2" id="logout-btn" style="display:none;">Logout</button></div>
+  <div id="siteheader">
+    <div id="Logoname">
+      <img onclick="transitionToPage('index.html')" id="logoimg" src="images/connectlogo.png" width="100%" height="100%">
+    </div>
+    <div id="siteheader-content">
+      <span id="overview" onclick="transitionToPage('index.html')" class="currentpage">Overview</span>
+      <span id="contact" onclick="transitionToPage('People.html')">People</span>
+      <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+      <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+      <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+    </div>
+    <div id="dropdiv" class="dropdown">
+      <div id = "A">
+        <button onclick="myFunction()" class="dropbtn">
+          <img id="dropimg" class="dropbtn" src="images/open.png" width=50 height=50>
+        </button>
+        
+      </div>
+      
+      <div id="myDropdown" class="dropdown-content">
+        <span id="overview" onclick="transitionToPage('index.html')" class="currentpage2">Overview</span>
+        <span id="contact" onclick="transitionToPage('People.html')">People</span>
+        <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+        <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+        <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+      </div>
+      
+    </div>
+     
+  </div>
+
+  <div id="TITLE">
+    <h1>Max's Drawings</h1>
+  </div>
+  <div class="line-1"></div>
+  <div id="titledescription">
+    <h2>I got bored during summer, so I coded this website for fun.</h2>
+  </div>
+  <div id="overview">
+    <div class="image-container">
+      <img src="images/other6.jpg" alt="Overview Image" id="overviewpicture" onclick="transitionToPage('Other.html')">
+      <div class="bottom-right-text">Recent</div>
+    </div>
+    <div id="overview-text">
+      <p id="text1">
+        On Max's Drawings, you will see drawings I do over time. The website was made in like 1 day. I like drawing sometimes, so I decided to code a website to showcase my drawings. This website's code is terrible and rushed, so plz do not learn from my work. Below this description, you can see portraits or ppl I draw, other stuff, and things I drew on my brother's Ipad during break. I hope you enjoy! I also put some drawings from a few years ago I found in my closet. I originally created this website for a non-profit idea but screw that becuz it seems like too much work that I didn't want to do.
+      </p>
+    </div>
+  </div>
+
+  <div class="line-1"></div>
+  <div class="person" id="bar">
+    <div class="image-container">
+      <img src="images/person1.jpg" alt="personlookingsideways" class="indexpics" onclick="transitionToPage('People.html')">
+      <div class="bottom-right-text">People</div>
+    </div>
+    <div class="image-container">
+      <img src="images/ipad1.jpg" alt="boyheronwallpaperIdrew" class="indexpics" onclick="transitionToPage('Ipad.html')">
+      <div class="bottom-right-text">Ipad Draws</div>
+    </div>
+    <div class="image-container">
+      <img src="images/other1.jpg" alt="abstractpicture" class="indexpics" onclick="transitionToPage('Other.html')">
+      <div class="bottom-right-text">Other Stuff</div>
+    </div>
+    <div class="image-container">
+      <img src="images/maxpicture.jpg" alt="maxpicture" class="indexpics" onclick="transitionToPage('aboutus.html')">
+      <div class="bottom-right-text">About me ig</div>
+    </div>
+  </div>
+
+  <div id="g_id_onload"
+       data-client_id="921917721206-3divt3v00dfjh1j05fmr3fks3b0vklkl.apps.googleusercontent.com"
+       data-login_uri="https://maxs-drawing-website.replit.app"
+       data-auto_prompt="false">
+  </div>
+  <footer>
+    <p>Make your own website<br>
+      <a href="https://youtu.be/chOvyuyZe9M">https://youtu.be/chOvyuyZe9M</a>
+    </p>
+    <br>
+    <p>Do not email me<br>
+      <a href="mailto:maxhzhang119@gmail.com">maxhzhang119@gmail.com</a>
+    </p>
+  </footer>
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+
+  function handleCredentialResponse(response) {
+    const jwt = response.credential;
+      const base64Url = jwt.split('.')[1]; // Extract payload from JWT
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        const userInfo = JSON.parse(jsonPayload);
+
+    // Decode the JWT and extract user information
+    decodeAndLogJWT(jwt);
+
+    // Store the JWT token in localStorage to persist login status
+    localStorage.setItem('google_jwt_token', jwt);
+
+
+  }
+
+  function decodeAndLogJWT(jwt) {
+    // Decode the JWT using atob
+    const base64Url = jwt.split('.')[1]; // Extract payload from JWT
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    const userInfo = JSON.parse(jsonPayload);
+
+    // Log the user information
+    console.log('User info:', userInfo);
+
+    // Store the user's name in localStorage
+    localStorage.setItem("name", userInfo.name);
+    localStorage.setItem("nameemail",userInfo.email);
+
+    const storedEmail = localStorage.getItem("nameemail");
+
+      fetch('/add-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: storedEmail })
+      })
+
+    .then(response => response.json())
+    .then(data => {
+      console.log("Data sent successfully:", data);
+    })
+    .catch(error => {
+      console.error("Error sending data:", error);
+    });
+
+
+
+
+    // Access the user's information like username, email, etc.
+    console.log('Username:', userInfo.name); // Typically, this is the Google account's display name
+    console.log('Email:', userInfo.email);
+
+  }
+
+  window.onload = function() {
+    // Check if the user is already logged in by checking localStorage
+    const jwtToken = localStorage.getItem('google_jwt_token');
+
+    if (jwtToken) {
+      // JWT token exists, decode and log the user information
+      decodeAndLogJWT(jwtToken);
+        console.log("USER IS ALREADY LOGGED IN");
+       document.getElementById('logout-btn').style.display = 'block';
+    } else {
+      // User is not logged in, so show the Google Sign-In button and prompt
+      google.accounts.id.initialize({
+        client_id: "921917721206-3divt3v00dfjh1j05fmr3fks3b0vklkl.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+      });
+
+      google.accounts.id.renderButton(
+        document.querySelector(".g_id_signin"), 
+        { theme: "outline", size: "large" }  // Customize the button's appearance
+      );
+
+      google.accounts.id.prompt(); // Prompt users to sign in
+
+    }
+  };
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      // Clear JWT token from localStorage
+      localStorage.removeItem('google_jwt_token');
+      localStorage.removeItem('name');
+
+
+      // Optionally, refresh the page or redirect to another page
+      location.reload(); // This will reload the page and reset the login state
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

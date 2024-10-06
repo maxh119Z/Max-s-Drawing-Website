@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Other</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="siteheader">
+    <div id="Logoname" onclick="transitionToPage('index.html')">
+      <img id="logoimg" src="images/connectlogo.png" width="100%" height="100%">
+    </div>
+    <div id="siteheader-content">
+      <span id="overview" onclick="transitionToPage('index.html')">Overview</span>
+      <span id="contact" onclick="transitionToPage('People.html')">People</span>
+      <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+      <span id="volunteer" onclick="transitionToPage('Other.html')" class="currentpage">Other</span>
+      <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+    </div>
+    <div id="dropdiv" class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">
+        <img id="dropimg" class="dropbtn" src="images/open.png" width=50 height=50>
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <span id="overview" onclick="transitionToPage('index.html')">Overview</span>
+        <span id="contact" onclick="transitionToPage('People.html')">People</span>
+        <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+        <span id="volunteer" class="currentpage2" onclick="transitionToPage('Other.html')">Other</span>
+        <span id="aboutus" onclick="transitionToPage('aboutus.html')">About Me?</span>
+      </div>
+    </div>
+  </div>
+  <div class="person">
+    <span class="info">
+      <h1>Islamic Art</h1><br>
+      <div class="line-2"></div><br>Mr. Einfeldt plz I need the one point of extra credit
+    </span>
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/other6.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">9/23/2024</div>
+    </div>
+  </div>
+  <div class="person">
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/other1.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">2022?</div>
+    </div>
+    <span class="info">
+      <h1>A guy eating a <br>guy eating Earth</h1><br>
+      <div class="line-2"></div><br>I drew this with my friends at school with marker.
+    </span>
+  </div>
+  <div class="person">
+    <span class="info">
+      <h1>Max's pizza</h1><br>
+      <div class="line-2"></div><br>A visual arts elective I had for a few months in 7th grade
+    </span>
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/other2.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">2021</div>
+    </div>
+  </div>
+  <div class="person">
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/other3.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">I don't know</div>
+    </div>
+    <span class="info">
+      <h1>im dizzy</h1><br>
+      <div class="line-2"></div>idk when I drew this to be honest.<br>
+    </span>
+  </div>
+  <div class="person">
+    <span class="info">
+      <h1>depressed lisa</h1><br>
+      <div class="line-2"></div>7th grade visual arts elective.<br>Mona Lisa sad because of pollution.<br>
+    </span>
+    <div class="image-container2">
+      <span id="maximg">
+        <img class="clickable" id="maxpicture" src="images/other4.jpg" alt="Max">
+      </span>
+      <div class="bottom-right-text">2021</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Make your own website
+      <br><a href="https://youtu.be/chOvyuyZe9M">https://youtu.be/chOvyuyZe9M</a>
+    </p>
+    <br>
+    <p>Do not email me<br>
+      <a href="mailto:maxhzhang119@gmail.com">maxhzhang119@gmail.com</a>
+    </p>
+  </footer>
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

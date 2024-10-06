@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About Us</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="siteheader">
+    <div id="Logoname" onclick="transitionToPage('index.html')">
+      <img id="logoimg" src="images/connectlogo.png" width="100%" height="100%">
+    </div>
+    <div id="siteheader-content">
+      <span id="overview" onclick="transitionToPage('index.html')">Overview</span>
+      <span id="contact" onclick="transitionToPage('People.html')">People</span>
+      <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+      <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+      <span id="aboutus" onclick="transitionToPage('aboutus.html')" class="currentpage">About Me?</span>
+    </div>
+    <div id="dropdiv" class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">
+        <img id="dropimg" class="dropbtn" src="images/open.png" width=50 height=50>
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <span id="overview" onclick="transitionToPage('index.html')" class="currentpage2">Overview</span>
+        <span id="contact" onclick="transitionToPage('People.html')">People</span>
+        <span id="classes" onclick="transitionToPage('Ipad.html')">Ipad</span>
+        <span id="volunteer" onclick="transitionToPage('Other.html')">Other</span>
+        <span id="aboutus" class="currentpage2" onclick="transitionToPage('aboutus.html')">About Me?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="line-1"></div>
+  <div id="TITLE"><h2>About Us</h2></div>
+  <div class="person">
+    <span id="maximg">
+      <img id="maxpicture" src="images/maxpicture.jpg" alt="Max">
+    </span>
+    <span class="info2">
+      <h1>Max Zhang</h1><br>
+      <div class="line-2"></div><br>
+      Hi, I am Max and I am a sophomore at Irvington <br>High School. I like badminton, coding, drawing. I<br>
+      started making this website because I saw a need<br>to use 1-2 days of my time coding this website!<br>
+      My skills in coding are mostly Java and HTML,<br>CSS,JS
+    </span>
+  </div>
+  <div class="person">
+    <span class="info2">
+      <h1>Maz Xhang</h1><br>
+      <div class="line-2"></div><br>
+      Hi, I am Maz and I am a sophomore at Irvington <br>School High. I like badminton, coding, drawing. I<br>
+      started making this website because I saw a need<br>to use -1 days of my life coding this website!<br>
+      My skills in coding are mostly playing Clash of Clans and,<br> arguing with my mom.
+    </span>
+    <span id="maximg">
+      <img id="maxpicture" src="images/IMG_0163.jpg" alt="Max">
+    </span>
+  </div>
+
+  <footer>
+    <p>Make your own website
+      <br><a href="https://youtu.be/chOvyuyZe9M">https://youtu.be/chOvyuyZe9M</a>
+    </p>
+    <br>
+    <p>Do not email me<br>
+      <a href="mailto:maxhzhang119@gmail.com">maxhzhang119@gmail.com</a>
+    </p>
+  </footer>
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
